@@ -1,12 +1,9 @@
-// require("@nomicfoundation/hardhat-toolbox");
 require("@nomicfoundation/hardhat-chai-matchers");
 require('@openzeppelin/hardhat-upgrades');
 require("@nomiclabs/hardhat-ethers"); 
 require('hardhat-deploy');
 require("@nomiclabs/hardhat-ethers");
 require("hardhat-deploy-ethers");
-// require("@symfoni/hardhat-react");
-// require("hardhat-typechain");
 require("@typechain/ethers-v5");
 const {config} = require("dotenv");
 
@@ -21,12 +18,6 @@ module.exports = {
       live: false,
       saveDeployments: true,
       tags: ["local"]
-    },
-
-    hardhat: {
-      live: false,
-      saveDeployments: true,
-      tags: ["test", "local"]
     },
 
     alfajores: {
@@ -59,22 +50,6 @@ module.exports = {
     imports: 'imports'
   },
 
-  namedAccounts: {
-    deployer: {
-      default: 0,
-      44787: `privatekey://${process.env.PRIVATE_KEY}`,
-    },
-
-    child_1: {
-      default: 1,
-      44787: process.env.CHILD_1,
-    },
-
-    child_2: {
-      default: 2,
-      44787 : `privatekey://${process.env.PRIVATE_KEY}`,
-    }
-  }
 };
 
 
